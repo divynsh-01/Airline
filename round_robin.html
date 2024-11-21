@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round Robin Scheduling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html"><div class="logo" style="cursor: pointer;">Airline Manager</div></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="priority.html">Priority</a>
+            <a href="round_robin.html" class="active">Round Robin</a>
+            <a href="sjf.html">SJF</a>
+            <a href="fcfs.html">FCFS</a>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Round Robin Scheduling</h1>
+            <p>Distribute flight slots equally to ensure fairness in scheduling.</p>
+        </div>
+    </header>
+
+    <section class="form-section">
+        <div class="form-container">
+            <h2>Enter Flight Details</h2>
+            <form action="/round-robin-schedule" method="POST">
+                <label for="flight-number">Flight Number:</label>
+                <input type="text" id="flight-number" name="flightNumber" placeholder="Enter flight number" required>
+
+                <label for="execution-time">Execution Time:</label>
+                <input type="number" id="execution-time" name="executionTime" placeholder="Enter execution time" required>
+
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Airline Management System. All Rights Reserved.</p>
+        <p>Contact us at <a href="mailto:support@team_n14.com">support@team_n14.com</a></p>
+    </footer>
+</body>
+</html>

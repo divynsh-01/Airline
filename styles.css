@@ -1,0 +1,272 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(to right, #f4f4f9, #eaf4fe);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #004080;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #0073e6, #80bfff);
+    color: white;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-content .cta-button {
+    background-color: #ffcc00;
+    color: #004080;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.hero-content .cta-button:hover {
+    background-color: #ffa31a;
+    transform: translateY(-2px);
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+/* Form Section */
+.form-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+/* Animation for form-container */
+.form-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(20px); /* Start slightly lower */
+    animation: slideIn 1s ease-out forwards; /* Apply animation */
+}
+
+/* Animation Keyframes */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move to the normal position */
+    }
+}
+
+.form-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+.form-container label {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.form-container button {
+    background-color: #004080;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.form-container button:hover {
+    background-color: #003366;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004080;
+    color: white;
+}
+
+.footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+/* Features Section */
+.features-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+/* Title */
+.features-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    color: #004080;
+}
+
+/* Features Container */
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Feature Item */
+.feature-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 22%; /* Set width of each box to make them fit in a row */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(20px); /* Start slightly lower */
+    animation: slideUp 1s ease-out forwards;
+}
+
+/* Feature Item Title */
+.feature-item h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #004080;
+}
+
+/* Feature Item Description */
+.feature-item p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Animation Keyframes */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move to normal position */
+    }
+}
+
+/* Flexbox properties to adjust on small screens */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 80%; /* Increase width for smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px; /* Add spacing below the checkbox group */
+}
+
+.checkbox-group input {
+    margin-right: 10px; /* Add some space between the checkbox and label */
+}
+
+.checkbox-group label {
+    font-size: 1.1em;
+    color: #333;
+}
+.dv{
+    position: relative;
+    right: 215px;
+    top: 4px;
+}
+.dvv{
+    position: relative;
+    right: 420px;
+}
+
+/* Navbar logo styling */
+.navbar a {
+    text-decoration: none; /* Remove the underline */
+    color: white; /* Ensure the color is white */
+}

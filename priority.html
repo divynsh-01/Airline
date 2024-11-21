@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priority Scheduling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html"><div class="logo" style="cursor: pointer;">Airline Manager</div></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="priority.html" class="active">Priority</a>
+            <a href="round_robin.html">Round Robin</a>
+            <a href="sjf.html">SJF</a>
+            <a href="fcfs.html">FCFS</a>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Priority Scheduling</h1>
+            <p>Manage critical flights based on fuel levels and medical emergencies.</p>
+        </div>
+    </header>
+
+    <section class="form-section">
+        <div class="form-container">
+            <h2>Enter Flight Details</h2>
+            <form action="/priority-schedule" method="POST">
+                <label for="flight-number">Flight Number:</label>
+                <input type="text" id="flight-number" name="flightNumber" placeholder="Enter flight number" required>
+
+                <label for="fuel-level">Fuel Level:</label>
+                <input type="number" id="fuel-level" name="fuelLevel" placeholder="Enter fuel level" required>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" class="dv" id="medical-emergency" name="medicalEmergency">
+                    <label for="medical-emergency" class="dvv">Medical_Emergency</label>
+                </div>
+                
+
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Airline Management System. All Rights Reserved.</p>
+        <p>Contact us at <a href="mailto:support@airlinemanager.com">support@airlinemanager.com</a></p>
+    </footer>
+</body>
+</html>
